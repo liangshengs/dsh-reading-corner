@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Reading Corner",
+    "description": "Read a short technical book or import a PDF beside the chat. Select text or a region and ask the agent with the quote or screenshot attached, then append answers to a per-book Markdown notebook."
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "dsh-reading-corner",
+  "version": "1.6.0",
+  "description": "Read a built-in mini-book or import a PDF beside the chat in DeepSeek Harness; select text or a region and ask the agent, then append answers to a per-book Markdown notebook.",
+  "license": "MIT",
+  "author": "dsh-reading-corner contributors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liangshengs/dsh-reading-corner"
+  },
+  "homepage": "https://github.com/liangshengs/dsh-reading-corner#readme",
+  "type": "module",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "pdf",
+    "reading",
+    "notes",
+    "study"
+  ],
+  "engines": {
+    "dsh": ">=0.2.1-rc.1 <0.3.0"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "PUBLISHING.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    },
+    "manifestVersion": 1
+  }
+}
